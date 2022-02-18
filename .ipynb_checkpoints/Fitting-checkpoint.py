@@ -13,7 +13,6 @@ class Fitting(object):
         if keys is not None:
             for i,j in enumerate(keys):
                 self.y[j] = y[i]
-        
         self.xname = None
         self.xunits = None
         self.yname = None
@@ -25,7 +24,7 @@ class Fitting(object):
     def get_x(self): return self.x
     def get_y(self, key): 
         index = self.keys[key]
-        
+    
     def add_y(self, key, y): 
         self.y[key] = y
     def update_x(self, x): 
@@ -40,7 +39,9 @@ class Fitting(object):
         self.title = title
         self.legend= legend
         self.size = size
-        
+    
+    
+    
     def plot(self, keys, linetype="", fitkey=None):
         if self.size is not None: 
             plt.figure(figsize = self.size)
